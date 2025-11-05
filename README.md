@@ -26,77 +26,15 @@ which prime-select
 prime-select query
 ```
 
-### 2. Installer l'extension
+## Installation
 
 ```bash
-# Aller dans le dossier de l'extension
-cd /home/axel/Documents/nvidia-prime-switcher
-
-# Compiler les schémas GSettings
-glib-compile-schemas schemas/
-
-# Copier l'extension dans le dossier des extensions GNOME
-mkdir -p ~/.local/share/gnome-shell/extensions/nvidia-prime-switcher@axel.local
-cp -r * ~/.local/share/gnome-shell/extensions/nvidia-prime-switcher@axel.local/
-
-# Redémarrer GNOME Shell
-# Sur X11: Alt+F2, tapez 'r', puis Entrée
-# Sur Wayland: Déconnectez-vous et reconnectez-vous
-```
-
-### 3. Activer l'extension
-
-```bash
-# Activer l'extension via la ligne de commande
-gnome-extensions enable nvidia-prime-switcher@axel.local
-
-# Ou utilisez l'application "Extensions" (gnome-extensions-app)
-```
-
-### 4. Configuration de pkexec (Important!)
-
-Pour permettre le changement de GPU sans mot de passe à chaque fois, créez une règle polkit :
-
-```bash
-sudo nano /etc/polkit-1/localauthority/50-local.d/prime-select.pkla
-```
-
-Ajoutez le contenu suivant :
-
-```ini
-[Allow prime-select for users]
-Identity=unix-user:*
-Action=org.freedesktop.policykit.exec
-ResultActive=yes
-ResultInactive=no
-ResultAny=no
-```
-
-Ou pour plus de sécurité, créez un fichier spécifique :
-
-```bash
-sudo nano /usr/share/polkit-1/actions/com.nvidia.prime.policy
-```
-
-Avec le contenu :
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE policyconfig PUBLIC
- "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
- "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
-<policyconfig>
-  <action id="com.nvidia.prime.select">
-    <description>Change NVIDIA Prime GPU mode</description>
-    <message>Authentication is required to change GPU mode</message>
-    <defaults>
-      <allow_any>auth_admin</allow_any>
-      <allow_inactive>auth_admin</allow_inactive>
-      <allow_active>yes</allow_active>
-    </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/prime-select</annotate>
-  </action>
-</policyconfig>
+#Rendez-vous dans le dossier télécharger
+cd home/Utilisateur/Téléchargements/extension_prime_selector
+#Donner les droits
+chmod +x install.sh
+#executer
+./install.sh 
 ```
 
 ## Utilisation
@@ -110,16 +48,17 @@ Avec le contenu :
    - **Hybrid** : Laisse le système choisir automatiquement
 
 5. Entrez votre mot de passe si demandé
-6. Redémarrez votre session pour appliquer les changements
+6. Redémarrez votre session pour appliquer les changements (la page met quelque seconde a s'afficher)
 
 ## Désinstallation
 
 ```bash
-# Désactiver l'extension
-gnome-extensions disable nvidia-prime-switcher@axel.local
-
-# Supprimer l'extension
-rm -rf ~/.local/share/gnome-shell/extensions/nvidia-prime-switcher@axel.local
+#Rendez-vous dans le dossier télécharger
+cd home/Utilisateur/Téléchargements/extension_prime_selector
+#Donner les droits
+chmod +x uninstall.sh
+#executer
+./uninstall.sh 
 ```
 
 ## Dépannage
@@ -154,22 +93,3 @@ sudo prime-select nvidia
 sudo prime-select intel
 sudo prime-select on-demand
 ```
-
-## Compatibilité
-
-- ✅ Ubuntu 25.10
-- ✅ Ubuntu 24.04 LTS (avec GNOME 46)
-- ✅ Fedora 40+ (avec GNOME 46+)
-- ✅ Autres distributions avec GNOME Shell 46 ou 47
-
-## Licence
-
-MIT License - Libre d'utilisation et de modification
-
-## Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir des issues ou des pull requests.
-
-## Auteur
-
-Créé pour faciliter la gestion de NVIDIA Prime sur Ubuntu 25.10
