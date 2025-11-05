@@ -1,0 +1,4 @@
+*.gschema.compiled
+*~
+*.swp
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "name": "NVIDIA Prime Switcher",
+  "description": "Basculer facilement entre les modes GPU NVIDIA, Intel et Hybrid depuis le panneau système",
+  "uuid": "nvidia-prime-switcher@axel.local",
+  "shell-version": [
+    "46",
+    "47",
+    "48"
+  ],
+  "version": 1,
+  "url": "https://github.com/axel/nvidia-prime-switcher",
+  "settings-schema": "org.gnome.shell.extensions.nvidia-prime-switcher"
+}

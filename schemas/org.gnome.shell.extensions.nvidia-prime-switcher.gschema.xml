@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.nvidia-prime-switcher" path="/org/gnome/shell/extensions/nvidia-prime-switcher/">
+    <key name="show-notifications" type="b">
+      <default>true</default>
+      <summary>Afficher les notifications</summary>
+      <description>Afficher les notifications lors du changement de mode GPU</description>
+    </key>
+    <key name="auto-restart-prompt" type="b">
+      <default>true</default>
+      <summary>Proposer le redémarrage automatique</summary>
+      <description>Proposer automatiquement de redémarrer la session après un changement de GPU</description>
+    </key>
+  </schema>
+</schemalist>
