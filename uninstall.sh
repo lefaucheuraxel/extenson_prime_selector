@@ -4,7 +4,7 @@
 
 set -e
 
-EXTENSION_UUID="nvidia-prime-switcher@axel.local"
+EXTENSION_UUID="nvidia-prime-switcher@UserName.local"
 EXTENSION_DIR="$HOME/.local/share/gnome-shell/extensions/$EXTENSION_UUID"
 
 echo "==================================="
