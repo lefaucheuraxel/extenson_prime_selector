@@ -5,7 +5,7 @@
 
 set -e
 
-EXTENSION_UUID="nvidia-prime-switcher@UserName.local"
+EXTENSION_UUID="nvidia-prime-switcher@axel.local"
 EXTENSION_DIR="$HOME/.local/share/gnome-shell/extensions/$EXTENSION_UUID"
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
