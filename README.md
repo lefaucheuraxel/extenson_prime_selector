@@ -32,9 +32,6 @@ prime-select query
 #Rendez-vous dans le dossier télécharger
 cd home/Utilisateur/Téléchargements/extension_prime_selector
 
-#Modifier les fichiers install.sh, reload-extension.sh et uninstall.sh
-#Remplacer UserName par votre nom d'utilisateur dans la variable: EXTENSION_UUID
-
 #Donner les droits
 chmod +x install.sh
 
@@ -60,9 +57,6 @@ chmod +x install.sh
 ```bash
 #Rendez-vous dans le dossier télécharger
 cd home/Utilisateur/Téléchargements/extension_prime_selector
-
-#Si ce n'est pas deja fait Modifier le fichier uninstall.sh
-#Remplacer UserName par votre nom d'utilisateur dans la variable: EXTENSION_UUID
 
 #Donner les droits
 chmod +x uninstall.sh
