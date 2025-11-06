@@ -1,6 +1,6 @@
 # NVIDIA Prime Switcher - Extension GNOME Shell
 
-Extension pour Ubuntu 25.10 et Gnome 48 permettant de basculer facilement entre les modes GPU NVIDIA Prime directement depuis le panneau de raccourcis système.
+Extension pour Gnome 46,47,48,49 permettant de basculer facilement entre les modes GPU NVIDIA Prime directement depuis le panneau de raccourcis système.
 
 ## Fonctionnalités
 
